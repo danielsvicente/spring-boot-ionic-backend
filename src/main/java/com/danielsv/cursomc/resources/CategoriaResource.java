@@ -18,7 +18,7 @@ public class CategoriaResource {
 	private CategoriaService sercive; 
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
-	public ResponseEntity<?> listar(@PathVariable Integer id) {
+	public ResponseEntity<?> find(@PathVariable Integer id) {
 		Categoria obj = sercive.buscar(id);
 		return ResponseEntity.ok().body(obj);
 	}
